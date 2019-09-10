@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/vector_targil.c
+stddef.h
+-
+stdlib.h
+-
+stdio.h
+-
+vector_targil.h
+/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/vector_targil.h
+
+/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/vector_targil.h
+glob.h
+-
+

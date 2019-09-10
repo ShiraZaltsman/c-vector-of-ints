@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/main.c.o CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/vector_targil.c.o  -o c_vector_of_ints_ShiraZaltsman 

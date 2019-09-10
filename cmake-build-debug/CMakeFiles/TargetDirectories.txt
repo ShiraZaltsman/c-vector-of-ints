@@ -1,0 +1,3 @@
+/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/cmake-build-debug/CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir
+/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/cmake-build-debug/CMakeFiles/edit_cache.dir
