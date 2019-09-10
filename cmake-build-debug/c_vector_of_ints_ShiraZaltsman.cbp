@@ -87,6 +87,12 @@
 		<Unit filename="/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/vector_targil.h">
 			<Option target="c_vector_of_ints_ShiraZaltsman"/>
 		</Unit>
+		<Unit filename="/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/vector_test.cpp">
+			<Option target="c_vector_of_ints_ShiraZaltsman"/>
+		</Unit>
+		<Unit filename="/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/vector_test.h">
+			<Option target="c_vector_of_ints_ShiraZaltsman"/>
+		</Unit>
 		<Unit filename="/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

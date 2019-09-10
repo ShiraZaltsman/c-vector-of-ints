@@ -1,0 +1,2 @@
+main.o: main.c vector_targil.h
+vector_targil.o: vector_targil.c vector_targil.h

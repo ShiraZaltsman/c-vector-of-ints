@@ -6,17 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/vector_targil.c
-stddef.h
--
-stdlib.h
--
+/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/main.c
 stdio.h
 -
 vector_targil.h
 /home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/vector_targil.h
 
+/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/vector_targil.c
+vector_targil.h
 /home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/vector_targil.h
+
+/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/vector_targil.h
+stdlib.h
+-
+stdio.h
+-
+stddef.h
+-
 glob.h
 -
 

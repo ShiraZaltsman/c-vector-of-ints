@@ -1,10 +1,8 @@
-//
-// Created by shira on 9/10/19.
-//
-
 #ifndef C_VECTOR_OF_INTS_SHIRAZALTSMAN_VECTOR_TARGIL_H
 #define C_VECTOR_OF_INTS_SHIRAZALTSMAN_VECTOR_TARGIL_H
-
+#include <stdlib.h>
+#include <stdio.h>
+#include <stddef.h>
 #include <glob.h>
 typedef enum
 {
@@ -52,7 +50,4 @@ size_t vectorGetCapacity(const Vector *vector);
 /* Counts how many instances of a given value there are. */
 size_t vectorCount(const Vector *vector, int value);
 
-#ifdef _DEBUG
-void vectorPrint(Vector *vector);
-#endif /* _DEBUG */
-#endif //C_VECTOR_OF_INTS_SHIRAZALTSMAN_VECTOR_TARGIL_H
+#endif /*C_VECTOR_OF_INTS_SHIRAZALTSMAN_VECTOR_TARGIL_H*/

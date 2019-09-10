@@ -1,10 +1,5 @@
-//
-// Created by shira on 9/10/19.
-//
 
-#include <stddef.h>
-#include <stdlib.h>
-#include <stdio.h>
+
 #include "vector_targil.h"
 
 
@@ -12,7 +7,6 @@ Vector *vectorCreate(Vector *vec, size_t size) {
     vec->m_capacity=size;
     vec->m_data= (int *)malloc(size * sizeof(int));
     vec->m_num_items=0;
-
     return vec;
 
 }
@@ -24,7 +18,7 @@ void vectorDestroy(Vector *vector) {
 }
 
 void arraycopy(int *dst, int *src, size_t src_size) {
-    int i;
+    size_t i;
     for (i = 0; i < src_size; ++i) {
         *dst = *src;
         dst++;
@@ -36,12 +30,12 @@ ErrorCode vectorPush(Vector *vector, int value) {
     if(!vector){
         return E_NULL_PTR;
     }
-    if (vector->m_capacity > vector->m_num_items) {
+    else if (vector->m_capacity > vector->m_num_items) {
         vector->m_data[vector->m_num_items] = value;
         vector->m_num_items++;
         return E_OK;
     }
-    if (vector->m_capacity == vector->m_num_items) {
+    else {
         vector->m_capacity*=2;
         int *dest = (int *) malloc(vector->m_capacity  * sizeof(int));
         if(!dest){
@@ -60,16 +54,17 @@ ErrorCode vectorInsert(Vector *vector, int value, size_t index) {
     if (index > vector->m_num_items-1 || index < 0){
         return E_BAD_INDEX;
     }
-    if (vector->m_capacity >= vector->m_num_items+1){
-        int i= vector->m_num_items;
+    else if (vector->m_capacity >= vector->m_num_items+1){
+        size_t i= vector->m_num_items;
         while(i != index){
             vector->m_data[i]=vector->m_data[i-1];
             --i;
         }
         vector->m_data[i]=value;
+        vector->m_num_items++;
         return E_OK;
     }
-    if (vector->m_capacity < vector->m_num_items+1) {
+    else {
         vector->m_capacity*=2;
         int *dest = (int *) malloc(vector->m_capacity  * sizeof(int));
         if(!dest){
@@ -77,6 +72,7 @@ ErrorCode vectorInsert(Vector *vector, int value, size_t index) {
         }
         arraycopy(dest, vector->m_data, index-1);
         dest[index]=value;
+        vector->m_num_items++;
         arraycopy(dest+index+1, vector->m_data+index, vector->m_num_items-index-1);
         return E_OK;
     }
@@ -114,6 +110,7 @@ ErrorCode vectorGetElement(const Vector *vector, size_t index, int *res) {
     return E_OK;
 }
 
+
 ErrorCode vectorSetElement(Vector *vector, size_t index, int value) {
     if (index > vector -> m_num_items - 1 || index < 0){
         return E_BAD_INDEX;
@@ -125,10 +122,30 @@ ErrorCode vectorSetElement(Vector *vector, size_t index, int value) {
 void printVector(Vector *vector) {
     printf("vector's capacity: %lu\n",vector->m_capacity );
     printf("vector has: %lu items \n",vector->m_num_items);
-    int i;
-    for ( i = 0; i <vector->m_num_items ; ++i) {
-        printf("%d ",vector->m_data[i]);
+    size_t i;
+    for ( i = 0; i < vector -> m_num_items ; ++i) {
+        printf("%d ",vector -> m_data[i]);
     }
     printf("\n");
+}
+
+size_t vectorGetSize(const Vector *vector) {
+
+    return vector->m_num_items;
+}
+
+size_t vectorGetCapacity(const Vector *vector) {
+    return vector->m_capacity;
+}
+
+size_t vectorCount(const Vector *vector, int value) {
+    size_t counter, i;
+    counter = 0;
+    for (i = 0; i < vector -> m_num_items; ++i) {
+        if(vector->m_data[i]==value) {
+            ++counter;
+        }
+    }
+    return counter;
 }
 
