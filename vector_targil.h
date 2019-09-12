@@ -13,16 +13,12 @@ typedef enum
     E_BAD_INDEX
 } ErrorCode;
 
-typedef struct Vector{
-    int *m_data;          /* array size of capacity */
-    size_t m_capacity;
-    size_t m_num_items;   /* num of items (numbers) in the vector */
-}Vector;
+typedef struct Vector Vector;
 
+/*need to check if Vector is not Null*/
+Vector *vectorCreate(size_t size);
 
-Vector *vectorCreate(Vector *vector, size_t size);
-
-void vectorDestroy(Vector *vector);
+void vectorDestroy(Vector **vector);
 
 /* copy values to new array */
 void arraycopy(int *des, int *src, size_t src_size);

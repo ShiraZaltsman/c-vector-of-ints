@@ -2,19 +2,34 @@
 
 #include "vector_targil.h"
 
+struct Vector{
+int *m_data;          /* array size of capacity */
+size_t m_capacity;
+size_t m_num_items;   /* num of items (numbers) in the vector */
+};
 
-Vector *vectorCreate(Vector *vec, size_t size) {
-    vec->m_capacity=size;
-    vec->m_data= (int *)malloc(size * sizeof(int));
-    vec->m_num_items=0;
+Vector *vectorCreate(size_t size) {
+    Vector *vec = malloc(sizeof(Vector));
+
+    if(vec) {
+        vec->m_num_items = 0;
+        vec->m_capacity = size;
+        vec->m_data = (int *) malloc(size * sizeof(int));
+
+        if(!vec->m_data) {
+            free(vec);
+            vec=NULL;
+        }
+    }
     return vec;
-
 }
 
-void vectorDestroy(Vector *vector) {
-
-    free(vector->m_data);
-
+void vectorDestroy(Vector **vector) {
+    if(vector && *vector) {
+        free((*vector) -> m_data);
+        free(*vector);
+        *vector = NULL; /*mark that vector destroy*/
+    }
 }
 
 void arraycopy(int *dst, int *src, size_t src_size) {

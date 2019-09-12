@@ -2,9 +2,7 @@
 #include "vector_targil.h"
 
 int main() {
-
-    Vector v;
-    Vector *vec = vectorCreate(&v,20);
+    Vector *vec = vectorCreate(20);
     vectorPush(vec, 6);
     vectorPush(vec, 20);
     vectorPush(vec, 30);
