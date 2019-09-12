@@ -46,4 +46,8 @@ size_t vectorGetCapacity(const Vector *vector);
 /* Counts how many instances of a given value there are. */
 size_t vectorCount(const Vector *vector, int value);
 
+#ifdef _DEBUG
+void vectorPrint(Vector *vector);
+#endif /* _DEBUG */
+
 #endif /*C_VECTOR_OF_INTS_SHIRAZALTSMAN_VECTOR_TARGIL_H*/

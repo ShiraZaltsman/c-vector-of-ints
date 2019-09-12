@@ -6,9 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/vector_targil.c
+/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/test.c
+assert.h
+-
+test.h
+/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/test.h
 vector_targil.h
 /home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/vector_targil.h
+
+/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/test.h
 
 /home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/vector_targil.h
 stdlib.h

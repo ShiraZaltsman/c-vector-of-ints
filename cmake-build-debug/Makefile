@@ -150,6 +150,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/build.make CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/main.c.s
 .PHONY : main.c.s
 
+test.o: test.c.o
+
+.PHONY : test.o
+
+# target to build an object file
+test.c.o:
+	$(MAKE) -f CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/build.make CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/test.c.o
+.PHONY : test.c.o
+
+test.i: test.c.i
+
+.PHONY : test.i
+
+# target to preprocess a source file
+test.c.i:
+	$(MAKE) -f CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/build.make CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/test.c.i
+.PHONY : test.c.i
+
+test.s: test.c.s
+
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.c.s:
+	$(MAKE) -f CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/build.make CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/test.c.s
+.PHONY : test.c.s
+
 vector_targil.o: vector_targil.c.o
 
 .PHONY : vector_targil.o
@@ -189,6 +216,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 	@echo "... vector_targil.o"
 	@echo "... vector_targil.i"
 	@echo "... vector_targil.s"

@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/cmake-buil
 CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/all:
 	$(MAKE) -f CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/build.make CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/depend
 	$(MAKE) -f CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/build.make CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target c_vector_of_ints_ShiraZaltsman"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target c_vector_of_ints_ShiraZaltsman"
 .PHONY : CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/all
 
 # Include target in all.
@@ -81,7 +81,7 @@ all: CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/c_vector_of_ints_ShiraZaltsman.dir/rule

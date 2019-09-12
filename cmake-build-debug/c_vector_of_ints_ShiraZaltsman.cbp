@@ -81,6 +81,12 @@
 		<Unit filename="/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/main.c">
 			<Option target="c_vector_of_ints_ShiraZaltsman"/>
 		</Unit>
+		<Unit filename="/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/test.c">
+			<Option target="c_vector_of_ints_ShiraZaltsman"/>
+		</Unit>
+		<Unit filename="/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/test.h">
+			<Option target="c_vector_of_ints_ShiraZaltsman"/>
+		</Unit>
 		<Unit filename="/home/shira/Desktop/c-vector-of-ints-ShiraZaltsman/vector_targil.c">
 			<Option target="c_vector_of_ints_ShiraZaltsman"/>
 		</Unit>
