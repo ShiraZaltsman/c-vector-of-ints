@@ -9,7 +9,7 @@ size_t m_num_items;   /* num of items (numbers) in the vector */
 };
 
 Vector *vectorCreate(size_t size) {
-    Vector *vec = malloc(sizeof(Vector));
+    Vector *vec = (struct Vector *)malloc(sizeof(struct Vector));
 
     if(vec) {
         vec->m_num_items = 0;
