@@ -28,6 +28,6 @@ run: $(TARGET)
 gdb: $(TARGET)
 	gdb -q ./$(TARGET)
 
-valgrind:
-	valgrind --leak-check=full ./$(TARGET
+valgrind: $(TARGET)
+	valgrind --leak-check=full ./$(TARGET)
 

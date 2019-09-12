@@ -10,7 +10,7 @@ void testVectorCreat() {
     int num;
     size_t cap;
     size_t size;
-    vec = vectorCreate(7);
+    vec = vectorCreate(18);
     vectorPush(vec, 6);
     vectorPush(vec, 20);
     vectorPush(vec, 30);
@@ -47,12 +47,22 @@ void testVectorCreat() {
 
     cap = vectorGetCapacity(vec);
     printf("\n----------------\nget capacity: %lu\n", cap);
-    printVector(vec);
 
 
     size= vectorGetSize(vec);
     printf("\n----------------\nget size: %lu\n", size);
+
+
+    e=vectorGetElement(vec, 5, res);
+    printf("\n----------------\nget elment in index 5: %d\n", *res);
+
+    e=vectorSetElement(vec, 5, 17);
+    printf("\n----------------\nset 17 in index 5: \n");
     printVector(vec);
 
+
+
+    vectorDestroy(&vec);
     printf("error return: %d", e);
+
 }

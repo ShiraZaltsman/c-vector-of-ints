@@ -51,7 +51,7 @@ ErrorCode vectorPush(Vector *vector, int value) {
     } else {
         int *tmp_data = vector->m_data;
 
-        vector->m_data = realloc(vector->m_data, vector->m_capacity * 2);
+        vector->m_data = realloc(vector->m_data, vector->m_capacity * 2 * sizeof(int));
         if (!vector->m_data) {
             vector->m_data = tmp_data;
             return E_ALLOCATION_ERROR;
@@ -90,11 +90,15 @@ ErrorCode vectorInsert(Vector *vector, int value, size_t index) {
         dest[index] = value;
         vector->m_num_items++;
         arraycopy(dest + index + 1, vector->m_data + index, vector->m_num_items - index - 1);
+        free(dest);
         return E_OK;
     }
 }
 
 ErrorCode vectorPop(Vector *vector, int *res) {
+    if (!vector) {
+        return E_NULL_PTR;
+    }
 
     if (vector->m_num_items == 0) {
         return E_UNDERFLOW;
@@ -107,6 +111,9 @@ ErrorCode vectorPop(Vector *vector, int *res) {
 
 ErrorCode vectorRemove(Vector *vector, size_t index, int *res) {
     size_t i;
+    if (!vector) {
+        return E_NULL_PTR;
+    }
     if (index > vector->m_num_items - 1) {
         return E_BAD_INDEX;
     }
@@ -134,6 +141,9 @@ ErrorCode vectorGetElement(const Vector *vector, size_t index, int *res) {
 
 
 ErrorCode vectorSetElement(Vector *vector, size_t index, int value) {
+    if (!vector) {
+        return E_NULL_PTR;
+    }
     if (index > vector->m_num_items - 1 || index < 0) {
         return E_BAD_INDEX;
     }
@@ -143,6 +153,10 @@ ErrorCode vectorSetElement(Vector *vector, size_t index, int value) {
 
 void printVector(Vector *vector) {
     size_t i;
+    if (!vector) {
+        return ;
+    }
+
     printf("vector's capacity: %lu\n", vector->m_capacity);
     printf("vector has: %lu items \n", vector->m_num_items);
 
@@ -153,25 +167,46 @@ void printVector(Vector *vector) {
 }
 
 size_t vectorGetSize(const Vector *vector) {
+    if (vector) {
+        return vector->m_num_items;
+    }
+    return 0;
 
-    return vector->m_num_items;
 }
 
 size_t vectorGetCapacity(const Vector *vector) {
-    return vector->m_capacity;
+    if (vector) {
+        return vector->m_capacity;
+    }
+    return 0;
+
 }
 
 size_t vectorCount(const Vector *vector, int value) {
-    size_t counter, i;
-    counter = 0;
+    if (vector) {
+        size_t counter, i;
+        counter = 0;
 
-    for (i = 0; i < vector->m_num_items; ++i) {
-        counter += (vector->m_data[i] == value);
+        for (i = 0; i < vector->m_num_items; ++i) {
+            counter += (vector->m_data[i] == value);
+        }
+        return counter;
     }
-    return counter;
+    return 0;
 }
 
 void vectorPrint(Vector *vector) {
+    size_t i;
+    if (!vector) {
+        return ;
+    }
 
+    printf("vector's capacity: %lu\n", vector->m_capacity);
+    printf("vector has: %lu items \n", vector->m_num_items);
+
+    for (i = 0; i < vector->m_num_items; ++i) {
+        printf("%d ", vector->m_data[i]);
+    }
+    printf("\n");
 }
 
